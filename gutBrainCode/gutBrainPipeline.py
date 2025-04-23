@@ -501,8 +501,8 @@ class fusedLoocv:
             fullTrainX, fullTestX = self.makeInputMats(fullTestReg,fullTrainReg,fullType)
             partTrainX, partTestX = self.makeInputMats(partTestReg,partTrainReg,partType)
 
-            fullBetaHat = np.dot(np.linalg.inv(np.dot(fullTrainX.T,fullTrainX)+fullPsi),np.dot(fullTrainX.T,trainData.T))
-            partBetaHat = np.dot(np.linalg.inv(np.dot(partTrainX.T,partTrainX)+partPsi),np.dot(partTrainX.T,trainDataPart.T))
+            fullBetaHat = np.dot(np.linalg.inv(np.dot(fullTrainX.T,fullTrainX)+np.dot(fullPsi.T,fullPsi)),np.dot(fullTrainX.T,trainData.T))
+            partBetaHat = np.dot(np.linalg.inv(np.dot(partTrainX.T,partTrainX)+np.dot(partPsi.T,partPsi)),np.dot(partTrainX.T,trainDataPart.T))
             fullYHat = np.dot(fullTestX,fullBetaHat)
             partYHat = np.dot(partTestX,partBetaHat)
             
@@ -632,7 +632,7 @@ def fusedRidge(y,toReg,orderVec,lambdaRidge,lambdaSmooth):
         yHat : matrix (nT x nCells) of predicted data"""
     psiMat = makePsiMat(orderVec,2,10) # construct psi matrix
     xMat = makeInputMat(toReg,orderVec) #
-    betaHat = np.dot(np.linalg.inv(np.dot(xMat.T,xMat)+psiMat),np.dot(xMat.T,y.T))
+    betaHat = np.dot(np.linalg.inv(np.dot(xMat.T,xMat)+np.dot(psiMat.T,psiMat)),np.dot(xMat.T,y.T))
     yHat = np.dot(xMat,betaHat) 
     return betaHat, yHat,xMat
 
