@@ -9,6 +9,14 @@ This notebook runs through example use of the pipeline, assuming all relevant da
 3. eP.26chFlt-v10
 4. parameters.pickle
 
+The notebook goes through the following steps:
+1. Loading data
+2. Aligning of ephys data and imaging data
+3. Creating of time series by downsampling to the frequency of the imaging data
+4. Running the LOOCV parts model
+5. Establishing a threshold for significance and extracting relevant cells
+6. Plotting results
+
 
 
 
