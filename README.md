@@ -25,7 +25,7 @@ The notebook goes through the following steps:
 This repository contains `eclass.py`, a standalone Python script designed to load, process, and generate metadata for larval zebrafish electrophysiology and stimulus recordings. 
 
 This script is provided as a companion tool for the datasets published on Figshare, supporting the manuscript:
-**"Whole-brain, All-optical Mapping of Interoceptive and Exteroceptive Processing"**
+**"Whole-brain, all-optical interrogation of neuronal dynamics underlying gut and vascular interoception in zebrafish"**
 
 ## Overview
 While this script originated as part of a larger, internal analysis pipeline, `eclass.py` has been isolated here to allow researchers to easily access and interact with the raw `.chFlt` electrophysiology data files hosted on Figshare without needing to install a complex package.
