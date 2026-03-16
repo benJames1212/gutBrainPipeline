@@ -1,6 +1,17 @@
 # gutBrainPipeline
 Analysis package for gut-brain processing
 
+# gutBrain_cellSelection_example.ipy
+
+This notebook runs through example use of the pipeline, assuming all relevant data has been placed in an identified folder. The necessary data are:
+1. cells0_clean.hdf5
+2. volume0.hdf5
+3. eP.26chFlt-v10
+4. parameters.pickle
+
+
+
+
 # eclass: Electrophysiology Data Loader for Larval Zebrafish
 
 This repository contains `eclass.py`, a standalone Python script designed to load, process, and generate metadata for larval zebrafish electrophysiology and stimulus recordings. 
