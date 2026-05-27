@@ -427,7 +427,7 @@ class fusedLoocv:
             testD[i-1,i]=-1
             testD[i+1,i] = -1
         testD[0,0] = 1
-        testD[1,0] = 1
+        testD[1,0] = -1
         testD[self.order-1,self.order-1]=1
         testD[self.order-2,self.order-1]=-1
         fullD[:self.order,:self.order] = testD
